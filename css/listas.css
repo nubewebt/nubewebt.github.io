@@ -39,7 +39,7 @@ label.fila,
 }
 
 .fila.conImagen {
-  align-items: initial;
+  align-items: center;
 }
 
 .fila .texto {
