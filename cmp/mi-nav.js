@@ -52,11 +52,11 @@ class MiNav extends HTMLElement {
         html += /* html */
           `<li>
             <a href=
-"pasatiempos.html">Pasatiempos</a>
+"pasatiempos.html">Roles</a>
           </li>
           <li>
             <a href=
-      "usuarios.html">Usuarios</a>
+      "usuarios.html">Documentos</a>
           </li>`;
       }
       this.ul.innerHTML += html;
