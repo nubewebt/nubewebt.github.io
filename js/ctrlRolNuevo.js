@@ -7,13 +7,13 @@ import {
     muestraError
   } from "../lib/util.js";
   import {
-    muestraPasatiempos
+    muestraRoless
   } from "./navegacion.js";
   import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoPasatiempo =
+  const daoRoles =
     getFirestore().
       collection("Roles");
   /** @type {HTMLFormElement} */
@@ -43,13 +43,13 @@ import {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const modelo = {
         nombre
       };
-      await daoPasatiempo.
+      await daoRoles.
         add(modelo);
-      muestraPasatiempos();
+      muestraRoles();
     } catch (e) {
       muestraError(e);
     }
