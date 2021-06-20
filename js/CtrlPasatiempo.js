@@ -15,7 +15,7 @@ import {
 
 const daoPasatiempo =
   getFirestore().
-    collection("Cargo");
+  collection("Tarea");
 const params =
   new URL(location.href).
     searchParams;

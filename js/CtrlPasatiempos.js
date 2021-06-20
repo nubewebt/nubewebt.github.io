@@ -15,7 +15,7 @@ const lista = document.
   querySelector("#lista");
 const daoPasatiempo =
   getFirestore().
-    collection("Cargo");
+  collection("Tarea");
 
 getAuth().
   onAuthStateChanged(
@@ -50,7 +50,7 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay cargos
+        -- No hay tareas
         registrados. --
       </li>`;
   }
