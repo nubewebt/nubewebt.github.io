@@ -7,13 +7,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -41,14 +41,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -63,7 +63,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -78,14 +78,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -95,10 +95,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -114,13 +114,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -148,14 +148,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -170,7 +170,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -185,14 +185,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -202,10 +202,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -221,13 +221,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -255,14 +255,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -277,7 +277,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -292,14 +292,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -309,10 +309,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -328,13 +328,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -362,14 +362,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -384,7 +384,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -399,14 +399,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -416,10 +416,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -435,13 +435,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -469,14 +469,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -491,7 +491,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -506,14 +506,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -523,10 +523,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -542,13 +542,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -576,14 +576,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -598,7 +598,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -613,14 +613,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -630,10 +630,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -649,13 +649,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -683,14 +683,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -705,7 +705,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -720,14 +720,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -737,10 +737,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -756,13 +756,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -790,14 +790,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -812,7 +812,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -827,14 +827,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -844,10 +844,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -863,13 +863,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -897,14 +897,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -919,7 +919,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -934,14 +934,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -951,10 +951,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -970,13 +970,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1004,14 +1004,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1026,7 +1026,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1041,14 +1041,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1058,10 +1058,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1077,13 +1077,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1111,14 +1111,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1133,7 +1133,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1148,14 +1148,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1165,10 +1165,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1184,13 +1184,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1218,14 +1218,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1240,7 +1240,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1255,14 +1255,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1272,10 +1272,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1291,13 +1291,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1325,14 +1325,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1347,7 +1347,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1362,14 +1362,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1379,10 +1379,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1398,13 +1398,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1432,14 +1432,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1454,7 +1454,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1469,14 +1469,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1486,10 +1486,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1505,13 +1505,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1539,14 +1539,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1561,7 +1561,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1576,14 +1576,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1593,10 +1593,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1612,13 +1612,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1646,14 +1646,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1668,7 +1668,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1683,14 +1683,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1700,10 +1700,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1719,13 +1719,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1753,14 +1753,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1775,7 +1775,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1790,14 +1790,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1807,10 +1807,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1826,13 +1826,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1860,14 +1860,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1882,7 +1882,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -1897,14 +1897,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -1914,10 +1914,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -1933,13 +1933,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -1967,14 +1967,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -1989,7 +1989,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2004,14 +2004,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2021,10 +2021,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2040,13 +2040,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2074,14 +2074,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2096,7 +2096,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2111,14 +2111,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2128,10 +2128,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2147,13 +2147,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2181,14 +2181,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2203,7 +2203,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2218,14 +2218,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2235,10 +2235,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2254,13 +2254,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2288,14 +2288,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2310,7 +2310,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2325,14 +2325,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2342,10 +2342,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2361,13 +2361,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2395,14 +2395,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2417,7 +2417,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2432,14 +2432,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2449,10 +2449,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2468,13 +2468,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2502,14 +2502,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2524,7 +2524,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2539,14 +2539,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2556,10 +2556,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2575,13 +2575,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2609,14 +2609,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2631,7 +2631,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2646,14 +2646,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2663,10 +2663,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2682,13 +2682,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2716,14 +2716,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2738,7 +2738,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2753,14 +2753,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2770,10 +2770,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2789,13 +2789,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2823,14 +2823,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2845,7 +2845,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2860,14 +2860,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2877,10 +2877,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -2896,13 +2896,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -2930,14 +2930,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -2952,7 +2952,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -2967,14 +2967,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -2984,10 +2984,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3003,13 +3003,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3037,14 +3037,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3059,7 +3059,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3074,14 +3074,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3091,10 +3091,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3110,13 +3110,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3144,14 +3144,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3166,7 +3166,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3181,14 +3181,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3198,10 +3198,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3217,13 +3217,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3251,14 +3251,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3273,7 +3273,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3288,14 +3288,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3305,10 +3305,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3324,13 +3324,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3358,14 +3358,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3380,7 +3380,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3395,14 +3395,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3412,10 +3412,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3431,13 +3431,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3465,14 +3465,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3487,7 +3487,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3502,14 +3502,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3519,10 +3519,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3538,13 +3538,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3572,14 +3572,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3594,7 +3594,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3609,14 +3609,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3626,10 +3626,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3645,13 +3645,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3679,14 +3679,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3701,7 +3701,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3716,14 +3716,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3733,10 +3733,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3752,13 +3752,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3786,14 +3786,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3808,7 +3808,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3823,14 +3823,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3840,10 +3840,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3859,13 +3859,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -3893,14 +3893,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -3915,7 +3915,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -3930,14 +3930,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -3947,10 +3947,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -3966,13 +3966,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4000,14 +4000,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4022,7 +4022,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4037,14 +4037,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4054,10 +4054,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4073,13 +4073,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4107,14 +4107,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4129,7 +4129,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4144,14 +4144,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4161,10 +4161,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4180,13 +4180,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4214,14 +4214,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4236,7 +4236,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4251,14 +4251,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4268,10 +4268,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4287,13 +4287,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4321,14 +4321,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4343,7 +4343,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4358,14 +4358,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4375,10 +4375,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4394,13 +4394,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4428,14 +4428,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4450,7 +4450,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4465,14 +4465,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4482,10 +4482,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4501,13 +4501,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4535,14 +4535,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4557,7 +4557,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4572,14 +4572,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4589,10 +4589,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4608,13 +4608,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4642,14 +4642,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4664,7 +4664,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4679,14 +4679,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4696,10 +4696,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4715,13 +4715,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4749,14 +4749,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4771,7 +4771,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4786,14 +4786,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4803,10 +4803,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4822,13 +4822,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4856,14 +4856,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4878,7 +4878,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -4893,14 +4893,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -4910,10 +4910,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -4929,13 +4929,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -4963,14 +4963,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -4985,7 +4985,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5000,14 +5000,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5017,10 +5017,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5036,13 +5036,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5070,14 +5070,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5092,7 +5092,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5107,14 +5107,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5124,10 +5124,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5143,13 +5143,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5177,14 +5177,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5199,7 +5199,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5214,14 +5214,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5231,10 +5231,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5250,13 +5250,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5284,14 +5284,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5306,7 +5306,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5321,14 +5321,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5338,10 +5338,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5357,13 +5357,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5391,14 +5391,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5413,7 +5413,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5428,14 +5428,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5445,10 +5445,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5464,13 +5464,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5498,14 +5498,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5520,7 +5520,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5535,14 +5535,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5552,10 +5552,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5571,13 +5571,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5605,14 +5605,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5627,7 +5627,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5642,14 +5642,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5659,10 +5659,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5678,13 +5678,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5712,14 +5712,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5734,7 +5734,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5749,14 +5749,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5766,10 +5766,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5785,13 +5785,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5819,14 +5819,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5841,7 +5841,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5856,14 +5856,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5873,10 +5873,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5892,13 +5892,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -5926,14 +5926,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -5948,7 +5948,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -5963,14 +5963,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -5980,10 +5980,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -5999,13 +5999,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6033,14 +6033,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6055,7 +6055,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6070,14 +6070,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6087,10 +6087,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6106,13 +6106,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6140,14 +6140,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6162,7 +6162,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6177,14 +6177,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6194,10 +6194,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6213,13 +6213,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6247,14 +6247,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6269,7 +6269,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6284,14 +6284,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6301,10 +6301,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6320,13 +6320,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6354,14 +6354,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6376,7 +6376,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6391,14 +6391,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6408,10 +6408,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6427,13 +6427,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6461,14 +6461,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6483,7 +6483,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6498,14 +6498,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6515,10 +6515,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6534,13 +6534,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6568,14 +6568,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6590,7 +6590,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6605,14 +6605,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6622,10 +6622,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6641,13 +6641,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6675,14 +6675,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6697,7 +6697,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6712,14 +6712,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6729,10 +6729,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6748,13 +6748,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6782,14 +6782,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6804,7 +6804,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6819,14 +6819,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6836,10 +6836,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6855,13 +6855,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6889,14 +6889,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -6911,7 +6911,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -6926,14 +6926,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -6943,10 +6943,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -6962,13 +6962,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -6996,14 +6996,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7018,7 +7018,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7033,14 +7033,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7050,10 +7050,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7069,13 +7069,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7103,14 +7103,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7125,7 +7125,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7140,14 +7140,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7157,10 +7157,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7176,13 +7176,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7210,14 +7210,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7232,7 +7232,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7247,14 +7247,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7264,10 +7264,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7283,13 +7283,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7317,14 +7317,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7339,7 +7339,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7354,14 +7354,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7371,10 +7371,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7390,13 +7390,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7424,14 +7424,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7446,7 +7446,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7461,14 +7461,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7478,10 +7478,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7497,13 +7497,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7531,14 +7531,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7553,7 +7553,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7568,14 +7568,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7585,10 +7585,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7604,13 +7604,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7638,14 +7638,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7660,7 +7660,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7675,14 +7675,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7692,10 +7692,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7711,13 +7711,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7745,14 +7745,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7767,7 +7767,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7782,14 +7782,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7799,10 +7799,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7818,13 +7818,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7852,14 +7852,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7874,7 +7874,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7889,14 +7889,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -7906,10 +7906,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -7925,13 +7925,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -7959,14 +7959,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -7981,7 +7981,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -7996,14 +7996,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8013,10 +8013,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8032,13 +8032,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8066,14 +8066,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8088,7 +8088,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8103,14 +8103,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8120,10 +8120,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8139,13 +8139,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8173,14 +8173,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8195,7 +8195,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8210,14 +8210,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8227,10 +8227,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8246,13 +8246,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8280,14 +8280,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8302,7 +8302,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8317,14 +8317,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8334,10 +8334,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8353,13 +8353,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8387,14 +8387,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8409,7 +8409,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8424,14 +8424,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8441,10 +8441,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8460,13 +8460,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8494,14 +8494,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8516,7 +8516,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8531,14 +8531,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8548,10 +8548,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8567,13 +8567,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8601,14 +8601,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8623,7 +8623,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8638,14 +8638,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8655,10 +8655,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8674,13 +8674,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8708,14 +8708,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8730,7 +8730,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8745,14 +8745,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8762,10 +8762,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8781,13 +8781,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8815,14 +8815,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8837,7 +8837,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8852,14 +8852,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8869,10 +8869,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8888,13 +8888,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -8922,14 +8922,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -8944,7 +8944,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -8959,14 +8959,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -8976,10 +8976,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -8995,13 +8995,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -9029,14 +9029,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -9051,7 +9051,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -9066,14 +9066,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -9083,10 +9083,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -9102,13 +9102,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -9136,14 +9136,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -9158,7 +9158,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -9173,14 +9173,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -9190,10 +9190,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -9209,13 +9209,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -9243,14 +9243,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -9265,7 +9265,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -9280,14 +9280,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -9297,10 +9297,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);
@@ -9316,13 +9316,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraRoles
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoPasatiempo =
+const daoRoles =
   getFirestore().
     collection("Roles");
 const params =
@@ -9350,14 +9350,14 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
       const data = doc.data();
       forma.nombre.value =
         data.nombre || "";
@@ -9372,7 +9372,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraRoles();
   }
 }
 
@@ -9387,14 +9387,14 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Roles} */
     const modelo = {
       nombre
     };
-    await daoPasatiempo.
+    await daoRoles.
       doc(id).
       set(modelo);
-    muestraPasatiempos();
+    muestraRoles();
   } catch (e) {
     muestraError(e);
   }
@@ -9404,10 +9404,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoPasatiempo.
+      await daoRoles.
         doc(id).
         delete();
-      muestraPasatiempos();
+      muestraRoles();
     }
   } catch (e) {
     muestraError(e);

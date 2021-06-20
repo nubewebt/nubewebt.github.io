@@ -1,5 +1,5 @@
 export function
-  muestraPasatiempos() {
+  muestraRoles() {
   location.href =
     "roles.html";
 }
