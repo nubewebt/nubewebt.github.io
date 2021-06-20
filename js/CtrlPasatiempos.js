@@ -15,7 +15,7 @@ const lista = document.
   querySelector("#lista");
 const daoPasatiempo =
   getFirestore().
-    collection("Pasatiempo");
+    collection("Cargo");
 
 getAuth().
   onAuthStateChanged(
