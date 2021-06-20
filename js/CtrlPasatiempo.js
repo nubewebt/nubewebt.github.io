@@ -3,37 +3,26 @@ import {
   getFirestore
 } from "../lib/fabrica.js";
 import {
-  eliminaStorage,
-  urlStorage
-} from "../lib/storage.js";
-import {
+  getString,
   muestraError
 } from "../lib/util.js";
 import {
-  muestraUsuarios
+  muestraPasatiempos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
-import {
-  checksRoles,
-  guardaUsuario,
-  selectPasatiempos
-} from "./usuarios.js";
 
+const daoPasatiempo =
+  getFirestore().
+    collection("Pasatiempo");
 const params =
   new URL(location.href).
     searchParams;
 const id = params.get("id");
-const daoUsuario = getFirestore().
-  collection("Usuario");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
-const img = document.
-  querySelector("img");
-/** @type {HTMLUListElement} */
-const listaRoles = document.
-  querySelector("#listaRoles");
+
 getAuth().onAuthStateChanged(
   protege, muestraError);
 
@@ -47,47 +36,69 @@ async function protege(usuario) {
   }
 }
 
+/** Busca y muestra los datos que
+ * corresponden al id recibido. */
 async function busca() {
   try {
-    const doc = await daoUsuario.
-      doc(id).
-      get();
+    const doc =
+      await daoPasatiempo.
+        doc(id).
+        get();
     if (doc.exists) {
+      /**
+       * @type {
+          import("./tipos.js").
+                  Pasatiempo} */
       const data = doc.data();
-      forma.cue.value = id || "";
-      img.src =
-        await urlStorage(id);
-      selectPasatiempos(
-        forma.pasatiempoId,
-        data.pasatiempoId)
-      checksRoles(
-        listaRoles, data.rolIds);
+      forma.nombre.value =
+        data.nombre || "";
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
         addEventListener(
           "click", elimina);
+    } else {
+      throw new Error(
+        "No se encontró.");
     }
   } catch (e) {
     muestraError(e);
-    muestraUsuarios();
+    muestraPasatiempos();
   }
 }
 
 /** @param {Event} evt */
 async function guarda(evt) {
-  await guardaUsuario(evt,
-    new FormData(forma), id);
+  try {
+    evt.preventDefault();
+    const formData =
+      new FormData(forma);
+    const nombre = getString(
+      formData, "nombre").trim();
+    /**
+     * @type {
+        import("./tipos.js").
+                Pasatiempo} */
+    const modelo = {
+      nombre
+    };
+    await daoPasatiempo.
+      doc(id).
+      set(modelo);
+    muestraPasatiempos();
+  } catch (e) {
+    muestraError(e);
+  }
 }
 
 async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoUsuario.
-        doc(id).delete();
-      await eliminaStorage(id);
-      muestraUsuarios();
+      await daoPasatiempo.
+        doc(id).
+        delete();
+      muestraPasatiempos();
     }
   } catch (e) {
     muestraError(e);

@@ -122,7 +122,8 @@ function htmlLista(snap) {
      * agrega un texto HTML. */
     html += /* html */
       `<li class="vacio">
-        -- Aún no hay mensajes registrados. --
+        -- No hay mensajes
+        registrados. --
       </li>`;
   }
   lista.innerHTML = html;

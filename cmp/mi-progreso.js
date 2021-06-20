@@ -3,7 +3,7 @@ class MiProgeso
   connectedCallback() {
     this.innerHTML = /* html */
       `<progress max="100">
-        Espere un momento…
+        Cargando…
       </progress>`;
   }
 }

@@ -8,6 +8,5 @@ class MiFooter
       </p>`;
   }
 }
-
 customElements.define(
   "mi-footer", MiFooter);

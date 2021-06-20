@@ -1,7 +1,7 @@
 export function
-  muestraRoles() {
+  muestraPasatiempos() {
   location.href =
-    "roles.html";
+    "pasatiempos.html";
 }
 
 export function

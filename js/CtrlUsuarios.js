@@ -19,8 +19,8 @@ const lista = document.
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
-const daoRoles = firestore.
-  collection("Roles");
+const daoPasatiempo = firestore.
+  collection("Pasatiempo");
 const daoUsuario = firestore.
   collection("Usuario");
 
@@ -81,9 +81,9 @@ async function htmlFila(doc) {
   const data = doc.data();
   const img = cod(
     await urlStorage(doc.id));
-  const roles =
-    await buscaRoles(
-      data.rolesId);
+  const pasatiempo =
+    await buscaPasatiempo(
+      data.pasatiempoId);
   const roles =
     await buscaRoles(data.rolIds);
   const parámetros =
@@ -105,7 +105,7 @@ async function htmlFila(doc) {
           </strong>
           <span
               class="secundario">
-            ${roles}<br>
+            ${pasatiempo}<br>
             ${roles}
           </span>
         </span>
@@ -114,26 +114,26 @@ async function htmlFila(doc) {
 }
 
 /** Recupera el html de un
- * roles en base a su id.
+ * pasatiempo en base a su id.
  * @param {string} id */
 async function
-buscaRoles(id) {
+  buscaPasatiempo(id) {
   if (id) {
     const doc =
-      await daoRoles.
+      await daoPasatiempo.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {import(
           "./tipos.js").
-            Roles} */
+            Pasatiempo} */
       const data = doc.data();
       return (/* html */
         `${cod(data.nombre)}`);
     }
   }
-  return "-- Sin Roles --";
+  return "-- Sin Pasatiempo --";
 }
 
 /** Recupera el html de los
