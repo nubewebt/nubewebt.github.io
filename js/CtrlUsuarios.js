@@ -20,7 +20,7 @@ const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoPasatiempo = firestore.
-  collection("Tarea");
+  collection("Pasatiempo");
 const daoUsuario = firestore.
   collection("Usuario");
 
@@ -133,7 +133,7 @@ async function
         `${cod(data.nombre)}`);
     }
   }
-  return "-- Sin tarea asignado --";
+  return "-- Sin Pasatiempo --";
 }
 
 /** Recupera el html de los
@@ -158,7 +158,7 @@ async function buscaRoles(ids) {
     }
     return html;
   } else {
-    return "-- Sin tareas --";
+    return "-- Sin Roles --";
   }
 }
 

@@ -4,10 +4,9 @@ class MiFooter
     this.innerHTML = /* html */
       `<p>
         &copy; 2021
-        Orta Domínguez Tristán Eduardo
+        Orta Domínguez Tristán Eduardo.
       </p>`;
   }
 }
-
 customElements.define(
   "mi-footer", MiFooter);

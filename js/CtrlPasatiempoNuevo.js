@@ -15,7 +15,7 @@ import {
 
 const daoPasatiempo =
   getFirestore().
-  collection("Tarea");
+    collection("Pasatiempo");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 getAuth().onAuthStateChanged(
