@@ -23,9 +23,16 @@ header {
     var(--color-header);
 }
 
-.bodyindex{
+.bodyindex {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0.5rem;
   width: 800px; 
   margin: 0 auto;
+  gap: 0.5rem;
 }
 .herramientas {
   display: flex;
