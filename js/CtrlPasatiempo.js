@@ -15,7 +15,7 @@ import {
 
 const daoPasatiempo =
   getFirestore().
-    collection("Pasatiempo");
+    collection("Roles");
 const params =
   new URL(location.href).
     searchParams;

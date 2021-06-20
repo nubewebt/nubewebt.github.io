@@ -15,7 +15,7 @@ const lista = document.
   querySelector("#lista");
 const daoPasatiempo =
   getFirestore().
-    collection("Pasatiempo");
+    collection("Roles");
 
 getAuth().
   onAuthStateChanged(
@@ -50,8 +50,8 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay pasatiempos
-        registrados. --
+        -- No hay roles
+        registrados aún. --
       </li>`;
   }
   lista.innerHTML = html;
