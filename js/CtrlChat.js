@@ -123,7 +123,7 @@ function htmlLista(snap) {
     html += /* html */
       `<li class="vacio">
         -- No hay mensajes
-        registrados. --
+        aún. --
       </li>`;
   }
   lista.innerHTML = html;

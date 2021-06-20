@@ -133,7 +133,7 @@ async function
         `${cod(data.nombre)}`);
     }
   }
-  return "-- Sin Pasatiempo --";
+  return "-- Sin cargo asignado --";
 }
 
 /** Recupera el html de los
@@ -158,7 +158,7 @@ async function buscaRoles(ids) {
     }
     return html;
   } else {
-    return "-- Sin Roles --";
+    return "-- Sin cargos --";
   }
 }
 
