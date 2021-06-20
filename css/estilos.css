@@ -23,6 +23,17 @@ header {
     var(--color-header);
 }
 
+.estructureIndex{
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
 .herramientas {
   display: flex;
   flex-flow: wrap;
