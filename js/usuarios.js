@@ -11,7 +11,7 @@ import {
   muestraUsuarios
 } from "./navegacion.js";
 
-const SIN_PASATIEMPO = /* html */
+const SIN_ROLES = /* html */
   `<option value="">
     -- Sin rol --
   </option>`;
@@ -19,7 +19,7 @@ const SIN_PASATIEMPO = /* html */
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
-const daoPasatiempo = firestore.
+const daoRoles = firestore.
   collection("Roles");
 const daoUsuario = firestore.
   collection("Usuario");
@@ -29,22 +29,22 @@ const daoUsuario = firestore.
     HTMLSelectElement} select
  * @param {string} valor */
 export function
-  selectPasatiempos(select,
+  selectRoles(select,
     valor) {
   valor = valor || "";
-  daoPasatiempo.
+  daoRoles.
     orderBy("nombre").
     onSnapshot(
       snap => {
-        let html = SIN_PASATIEMPO;
+        let html = SIN_ROLES;
         snap.forEach(doc =>
-          html += htmlPasatiempo(
+          html += htmlRoles(
             doc, valor));
         select.innerHTML = html;
       },
       e => {
         muestraError(e);
-        selectPasatiempos(
+        selectRoles(
           select, valor);
       }
     );
@@ -56,13 +56,13 @@ export function
   DocumentSnapshot} doc
  * @param {string} valor */
 function
-  htmlPasatiempo(doc, valor) {
+  htmlRoles(doc, valor) {
   const selected =
     doc.id === valor ?
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  Pasatiempo} */
+                  Roles} */
   const data = doc.data();
   return (/* html */
     `<option
