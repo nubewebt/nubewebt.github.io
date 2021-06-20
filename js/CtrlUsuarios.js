@@ -20,7 +20,7 @@ const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoPasatiempo = firestore.
-  collection("Pasatiempo");
+  collection("Tarea");
 const daoUsuario = firestore.
   collection("Usuario");
 
@@ -127,13 +127,13 @@ async function
       /**
        * @type {import(
           "./tipos.js").
-            Pasatiempo} */
+            Tarea} */
       const data = doc.data();
       return (/* html */
         `${cod(data.nombre)}`);
     }
   }
-  return "-- Sin Pasatiempo --";
+  return "-- Sin Tarea --";
 }
 
 /** Recupera el html de los

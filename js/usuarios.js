@@ -13,14 +13,14 @@ import {
 
 const SIN_PASATIEMPO = /* html */
   `<option value="">
-    -- Sin Pasatiempo --
+    -- Sin Tarea --
   </option>`;
 
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoPasatiempo = firestore.
-  collection("Pasatiempo");
+  collection("Tarea");
 const daoUsuario = firestore.
   collection("Usuario");
 
@@ -62,7 +62,7 @@ function
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  Pasatiempo} */
+                  Tarea} */
   const data = doc.data();
   return (/* html */
     `<option

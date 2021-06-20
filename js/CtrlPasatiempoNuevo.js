@@ -15,7 +15,7 @@ import {
 
 const daoPasatiempo =
   getFirestore().
-    collection("Pasatiempo");
+    collection("Tarea");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 getAuth().onAuthStateChanged(
@@ -43,7 +43,7 @@ async function guarda(evt) {
     /**
      * @type {
         import("./tipos.js").
-                Pasatiempo} */
+                Tarea} */
     const modelo = {
       nombre
     };
