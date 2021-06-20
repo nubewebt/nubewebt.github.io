@@ -4,9 +4,10 @@ class MiFooter
     this.innerHTML = /* html */
       `<p>
         &copy; 2021
-        Orta Domínguez Tristán Eduardo.
+        Ricardo Armando Machorro Reyes.
       </p>`;
   }
 }
+
 customElements.define(
   "mi-footer", MiFooter);
